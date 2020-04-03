@@ -2007,6 +2007,7 @@ Function EnableDarkTheme {
 Function DisableDarkTheme {
 	Write-Output "Disabling Dark Theme..."
 	Remove-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" -Name "AppsUseLightTheme" -ErrorAction SilentlyContinue
+	Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" -Name "SystemUsesLightTheme" -Type DWord -Value 1
 }
 
 # Add secondary en-US keyboard
