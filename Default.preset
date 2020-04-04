@@ -220,7 +220,7 @@ AddPhotoViewerOpenWith          # RemovePhotoViewerOpenWith
 UninstallXPSPrinter             # InstallXPSPrinter
 RemoveFaxPrinter                # AddFaxPrinter
 # UninstallFaxAndScan           # InstallFaxAndScan
-# InstallWindowsSandbox         # UninstallWindowsSandbox
+InstallWindowsSandbox         # UninstallWindowsSandbox
 
 ### Server Specific Tweaks ###
 # HideServerManagerOnLogin      # ShowServerManagerOnLogin
