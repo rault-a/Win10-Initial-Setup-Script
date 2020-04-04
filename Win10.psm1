@@ -3577,6 +3577,18 @@ Function InstallFaxAndScan {
 	Get-WindowsCapability -Online | Where-Object { $_.Name -like "Print.Fax.Scan*" } | Add-WindowsCapability -Online | Out-Null
 }
 
+# Install Windows Sandbox
+Function InstallWindowsSandbox {
+	Write-Output "Installing Windows Sandbox..."
+	Enable-WindowsOptionalFeature -FeatureName "Containers-DisposableClientVM" -All -Online
+}
+
+# Uninstall Windows Sandbox
+Function UninstallWindowsSandbox {
+	Write-Output "Uninstalling Windows Sandbox..."
+	Disable-WindowsOptionalFeature -FeatureName "Containers-DisposableClientVM" -Online
+}
+
 ##########
 #endregion Application Tweaks
 ##########
